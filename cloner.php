@@ -4,7 +4,7 @@
 	 * Description: Clone posts, pages and custom post types easily
 	 * Author: biohzrdmx
 	 * Version: 1.0
-	 * Plugin URI: http://github.com/biohzrdmx/cloner
+	 * Plugin URI: http://github.com/biohzrdmx/wp-cloner
 	 * Author URI: http://github.com/biohzrdmx/
 	 */
 
@@ -151,7 +151,7 @@
 				$oldpost = get_post($post_id);
 				$post    = array(
 					'post_title' => $title,
-					'post_status' => 'publish',
+					'post_status' => $oldpost->post_status,
 					'post_type' => $oldpost->post_type,
 					'post_content' => $oldpost->post_content,
 					'post_excerpt' => $oldpost->post_excerpt,
